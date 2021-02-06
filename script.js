@@ -8,23 +8,24 @@ const getFood = foodKeyWord => {
 }
 
 document.getElementById('search').addEventListener('click', function () {
-    const foodName = document.getElementById('food-name').value;
-    getFood(foodName);
+    const foodNames = document.getElementById('food-name').value;
+    getFood(foodNames);
 });
 
 const displayFood = food => {
     // const fooName = food.strMeal[0];
     // console.log(fooName);
     // console.log(food.meals[0]);
-    // food.forEach(element => {
-    //     console.log(element);
-    // });
+    food.meals.forEach(singleFood => {
+        console.log(singleFood);
+    });
 
-    for (let i = 0; i < food.meals.length; i++) {
-        const element = food.meals[i];
-        console.log(element.strMeal);
+    // for (let i = 0; i < food.meals.length; i++) {
+    //     const element = food.meals[i];
+    //     console.log(element.strMeal);
         
-    }
+    // }
 }
 
-
+// strMeal
+// strMealThumb
