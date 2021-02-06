@@ -21,7 +21,7 @@ const displayFood = food => {
         mealArea.className = 'meal-area';
         const mealInfo = `
             <img class="meal-photo" src="${singleFood.strMealThumb}">
-            <h1 class="meal-name">${singleFood.strMeal}<h1>            
+            <h5 class="meal-name">${singleFood.strMeal}<h5>            
         `
         mealsDiv.appendChild(mealArea);
         mealArea.innerHTML = mealInfo;
