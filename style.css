@@ -4,13 +4,13 @@
   grid-gap: 30px;
   text-align: center;
 }
-.meal-area {
+#meal-area {
     margin: 10px;
     padding: 5px;
     box-shadow: 10px 10px 10px 10px aliceblue;
 }
 .meal-name {
-    margin-top: 10px;
+    
 }
 .meal-photo {
   width: 350px;
