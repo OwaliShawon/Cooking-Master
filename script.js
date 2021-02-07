@@ -38,6 +38,33 @@ const getMeal = idMeal => {
         .then(data => displayMealIngredient(data));
 }
 
-const displayMealIngredient = ingredient =>{
-    
+const displayMealIngredient = ingredient => {
+    document.getElementById('meal-details-ingredient');
+    ingredient.meals.forEach(element => {
+        // console.log(element.strMeal + element.strMealThumb);
+
+        const ingDiv = document.getElementById("meal-details-ingredient")
+        const ingArea = document.createElement('Div');
+
+        const ingDetails = `
+            <img src="${element.strMealThumb}">
+            <h4>${element.strMeal}</h4>
+            <h5>Ingredients</h5>
+            <ol>
+                <li>${element.strIngredient1}</li>
+                <li>${element.strIngredient2}</li>
+                <li>${element.strIngredient3}</li>
+                <li>${element.strIngredient4}</li>
+                <li>${element.strIngredient5}</li>
+                <li>${element.strIngredient6}</li>
+                <li>${element.strIngredient7}</li>
+                <li>${element.strIngredient8}</li>
+                <li>${element.strIngredient9}</li>
+                <li>${element.strIngredient10}</li>
+            </ol>
+        `
+        ingDiv.appendChild(ingArea);
+        ingArea.innerHTML = ingDetails;
+    });
+
 }
