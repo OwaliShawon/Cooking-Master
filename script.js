@@ -1,6 +1,7 @@
 //clicking search button to call for data which go to getfood function
 document.getElementById('search').addEventListener('click', function () {
     document.getElementById('food-items').innerHTML = " ";
+    document.getElementById('meal-details-ingredient').innerHTML = " ";
     const foodNames = document.getElementById('food-name').value;
     getFood(foodNames);
 });
@@ -39,10 +40,10 @@ const getMeal = idMeal => {
 }
 
 const displayMealIngredient = ingredient => {
+    document.getElementById('meal-details-ingredient').innerHTML = " ";
     document.getElementById('meal-details-ingredient');
-    ingredient.meals.forEach(element => {
-        // console.log(element.strMeal + element.strMealThumb);
 
+    ingredient.meals.forEach(element => {
         const ingDiv = document.getElementById("meal-details-ingredient")
         const ingArea = document.createElement('Div');
 
